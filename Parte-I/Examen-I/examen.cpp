@@ -95,8 +95,6 @@ int main(int argc, char* argv[]) {
 				productosComprados = productosComprados + "Galleta de Chocolate..L 15.00\n";
 				numeroArticulos++;
 				break;								
-			default: 		
-				break;
 		}
 		
 		 system("CLS");
