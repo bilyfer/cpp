@@ -50,6 +50,7 @@ bool buscarCliente(string &codigo, string &nombreCliente) {
 			if (arregloClientes[indice][0] == codigo) {
 				nombreCliente = arregloClientes[indice][1];
 				mensajeEnConsola("--> " + nombreCliente);
+				system("PAUSE");
 				return true;
 			}
 		}		

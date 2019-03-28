@@ -1,6 +1,7 @@
 #include <iostream>
 #include "menu.h"
 #include "rentar.h"
+#include "ventas.h"
 #include "clientes.h"
 #include "juegos.h"
 
@@ -16,9 +17,10 @@ void menu() {
 		cout << "--------------" << endl;
 		cout << endl;
 		cout << "1 - Rentar Juegos" << endl;
-		cout << "2 - Clientes" << endl;
-		cout << "3 - Juegos" << endl;
-		cout << "4 - Salir" << endl;
+		cout << "2 - Ventas" << endl;
+		cout << "3 - Clientes" << endl;
+		cout << "4 - Juegos" << endl;
+		cout << "5 - Salir" << endl;
 		
 		cout << endl;
 		cout << endl;				
@@ -30,12 +32,15 @@ void menu() {
 				rentar();
 				break;	
 			case 2:
-				clientes();
+				ventas();
 				break;
 			case 3:
-				juegos();
+				clientes();
 				break;
 			case 4:
+				juegos();
+				break;
+			case 5:
 				salir = true;	
 			default: 		
 				break;

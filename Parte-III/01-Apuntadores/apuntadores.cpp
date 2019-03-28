@@ -10,34 +10,19 @@ main() {
 	nota = 10;
 	 	 
 	apuntador1 = &nota;	 
+	apuntador2 = &nota;
 	 
 	cout << "El valor de nota: " << nota << endl;;
 	 
 	*apuntador1 = 12;
 	 
-	cout << "El valor de nota despues que el apuntador lo modifica: " << nota << endl;
-	cout << "El valor de los apuntadores 1 y 2: " << apuntador1 << ", " << apuntador2 << endl;
+	cout << "El valor de nota despues que el apuntador1 lo modifica: " << nota << endl;
+
+	system("PAUSE");
 	
+	*apuntador2 = 15;
 	
-	// Punteros con arreglos
-	int arreglo[5];
-	
-	for (int i = 0; i < 5; i++) {
-		arreglo[i] = i + 1;
-	}
-	
-	int *apuntador3;
-	apuntador3 = arreglo;
-	
-	cout << "Valor arreglo: " << apuntador2[2] << endl;
-	
-	apuntador3 = &arreglo[0];
-	
-	cout << "Valor arreglo elemento 0: " << apuntador2[0] << endl;
-	
-	apuntador3[0] = 50;
-	
-	cout << "Valor arreglo elemento 0: " << apuntador2[0] << endl;
+	cout << "El valor de nota despues que el apuntador2 lo modifica: " << nota << endl;
 	
 	return 0;
 }
