@@ -4,6 +4,39 @@
 
 using namespace std;
 
+struct Cliente {
+	string codigo;
+	string nombre;
+	string telefono;
+};
+
+Cliente arrClientes[5];
+
+void cargarDatosdeClientes() {
+	arrClientes[0].codigo = "C001";
+	arrClientes[0].nombre = "Juan Perez";
+	arrClientes[0].telefono = "99-99-99-99";
+	
+	Cliente cliente2;
+	cliente2.codigo = "C002";
+	cliente2.nombre = "Jose Martinez";
+	cliente2.telefono = "88-88-88-88";
+	
+	arrClientes[1] = cliente2;
+	
+	arrClientes[2].codigo = "C003";
+	arrClientes[2].nombre = "Maria Gonzalez";
+	arrClientes[2].telefono = "99-77-77-77";
+	
+	arrClientes[3].codigo = "C004";
+	arrClientes[3].nombre = "Pedro Hernandez";
+	arrClientes[3].telefono = "99-66-66-66";
+	
+	arrClientes[4].codigo = "C005";
+	arrClientes[4].nombre = "Pablo Jiminez";
+	arrClientes[4].telefono = "99-55-55-55";		
+}
+
 string arregloClientes[5][3] = {
 	{ "C001", "Juan Perez", "99-99-99-99"},
 	{ "C002", "Jose Martinez", "99-88-88-88"},
@@ -14,13 +47,16 @@ string arregloClientes[5][3] = {
 
 
 void clientes() {
+	
+	cargarDatosdeClientes();
+	
 	system("cls");
 
 	cout << "Listado de Clientes" << endl;
 	cout << "-------------------" << endl;
 		
 	for(int indice = 0; indice < 5; indice++) {
-		cout << arregloClientes[indice][0] << " - " << arregloClientes[indice][1] << endl;;
+		cout << arrClientes[indice].codigo << " - " << arrClientes[indice].nombre << endl << " - " << arrClientes[indice].telefono;
 	}
 
 	cout << endl;

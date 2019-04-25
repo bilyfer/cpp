@@ -5,7 +5,31 @@
 
 using namespace std;
 
+struct Categoria {
+	int codigo;
+	string descripcion;
+};
+
+struct Libro {
+	string codigo;
+	string titulo;
+	string descripcion;
+	Categoria categoria;
+};
+
 int main() {
+	Categoria cat1;
+	cat1.codigo = 1;
+	cat1.descripcion = "Algoritmos";
+	
+	Libro l1;
+	l1.codigo = "AP-001";
+	l1.titulo = "Algoritmos y Programacion (Guia para docentes)";
+	l1.categoria = cat1;
+	
+	cout << l1.titulo << " " << l1.categoria.descripcion << endl;
+	
+	system("pause");
 	
 	// Arreglo con Categoria y descripcion	
 	string libros[39][2];

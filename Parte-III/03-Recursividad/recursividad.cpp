@@ -12,15 +12,17 @@ int main(){
 }
 
 void comprobar(char r){
-     int n=int(r);
-     if (n>=48 and n<=57) {
+     int n = int(r);
+     
+     if (n>=48 && n<=57) {
         cout << "Correcto, la tecla pulsada es un numero." << endl;
      }
      else {
         cout << "Incorrecto, la tecla pulsada NO es un numero." << endl;
         cout << "Vuelve a pulsar un numero : ";
-        cin >>r;
+        cin >> r;
         comprobar(r);
+        cout << "Tecla presionada: " << r << endl;
      }
 }
 
